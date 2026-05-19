@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-
+​​<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -22,465 +21,464 @@
     --border: rgba(74,138,140,0.2);
   }
 
-- { margin: 0; padding: 0; box-sizing: border-box; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-body {
-background: var(–cream);
-color: var(–text-dark);
-font-family: ‘Cormorant Garamond’, serif;
-overflow-x: hidden;
-}
+  body {
+    background: var(--cream);
+    color: var(--text-dark);
+    font-family: 'Cormorant Garamond', serif;
+    overflow-x: hidden;
+  }
 
-/* ── NAV ── */
-nav {
-position: fixed;
-top: 0; left: 0; right: 0;
-z-index: 100;
-padding: 1rem 2.5rem;
-display: flex;
-justify-content: space-between;
-align-items: center;
-background: rgba(253,248,240,0.95);
-backdrop-filter: blur(8px);
-border-bottom: 1px solid var(–border);
-}
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 1rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(253,248,240,0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
 
-.nav-logo {
-font-family: ‘Playfair Display’, serif;
-font-size: 1.1rem;
-font-style: italic;
-color: var(–teal-dark);
-text-decoration: none;
-}
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--teal-dark);
+    text-decoration: none;
+  }
 
-.nav-links {
-display: flex;
-gap: 2rem;
-list-style: none;
-}
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
 
-.nav-links a {
-font-family: ‘Josefin Sans’, sans-serif;
-font-size: 0.68rem;
-letter-spacing: 0.25em;
-text-transform: uppercase;
-color: var(–text-light);
-text-decoration: none;
-transition: color 0.2s;
-}
+  .nav-links a {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
 
-.nav-links a:hover { color: var(–teal); }
+  .nav-links a:hover { color: var(--teal); }
 
-@media (max-width: 500px) { .nav-links { display: none; } }
+  @media (max-width: 500px) { .nav-links { display: none; } }
 
-/* ── HERO ── */
-.hero {
-min-height: 100vh;
-background:
-radial-gradient(ellipse at 30% 50%, rgba(74,138,140,0.08) 0%, transparent 60%),
-radial-gradient(ellipse at 80% 20%, rgba(196,115,42,0.08) 0%, transparent 50%),
-linear-gradient(160deg, var(–warm-white) 0%, var(–cream) 50%, var(–parchment) 100%);
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-text-align: center;
-padding: 6rem 2rem 4rem;
-position: relative;
-overflow: hidden;
-}
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background:
+      radial-gradient(ellipse at 30% 50%, rgba(74,138,140,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 20%, rgba(196,115,42,0.08) 0%, transparent 50%),
+      linear-gradient(160deg, var(--warm-white) 0%, var(--cream) 50%, var(--parchment) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 6rem 2rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
 
-.hero::before {
-content: ‘’;
-position: absolute;
-inset: 0;
-background-image:
-repeating-linear-gradient(0deg, transparent, transparent 80px, rgba(74,138,140,0.03) 80px, rgba(74,138,140,0.03) 81px),
-repeating-linear-gradient(90deg, transparent, transparent 80px, rgba(74,138,140,0.03) 80px, rgba(74,138,140,0.03) 81px);
-pointer-events: none;
-}
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 80px, rgba(74,138,140,0.03) 80px, rgba(74,138,140,0.03) 81px),
+      repeating-linear-gradient(90deg, transparent, transparent 80px, rgba(74,138,140,0.03) 80px, rgba(74,138,140,0.03) 81px);
+    pointer-events: none;
+  }
 
-.hero-logo {
-width: min(480px, 85vw);
-height: auto;
-margin-bottom: 1.5rem;
-opacity: 0;
-animation: fadeUp 1s ease 0.2s forwards;
-filter: drop-shadow(0 4px 20px rgba(74,138,140,0.15));
-}
+  .hero-logo {
+    width: min(480px, 85vw);
+    height: auto;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fadeUp 1s ease 0.2s forwards;
+    filter: drop-shadow(0 4px 20px rgba(74,138,140,0.15));
+  }
 
-.hero-divider {
-width: 160px;
-height: 1px;
-background: linear-gradient(90deg, transparent, var(–teal), transparent);
-margin: 0.5rem auto 1.5rem;
-opacity: 0;
-animation: fadeUp 0.8s ease 0.6s forwards;
-}
+  .hero-divider {
+    width: 160px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--teal), transparent);
+    margin: 0.5rem auto 1.5rem;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.6s forwards;
+  }
 
-.hero-sub {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-font-weight: 300;
-font-style: italic;
-color: var(–text-mid);
-line-height: 1.7;
-max-width: 560px;
-opacity: 0;
-animation: fadeUp 0.8s ease 0.8s forwards;
-}
+  .hero-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--text-mid);
+    line-height: 1.7;
+    max-width: 560px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.8s forwards;
+  }
 
-.hero-venue {
-margin-top: 1.2rem;
-font-family: ‘Josefin Sans’, sans-serif;
-font-size: 0.75rem;
-letter-spacing: 0.3em;
-text-transform: uppercase;
-color: var(–teal);
-opacity: 0;
-animation: fadeUp 0.8s ease 1s forwards;
-}
+  .hero-venue {
+    margin-top: 1.2rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--teal);
+    opacity: 0;
+    animation: fadeUp 0.8s ease 1s forwards;
+  }
 
-.hero-cta {
-margin-top: 2.5rem;
-opacity: 0;
-animation: fadeUp 0.8s ease 1.2s forwards;
-}
+  .hero-cta {
+    margin-top: 2.5rem;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 1.2s forwards;
+  }
 
-.btn-primary {
-display: inline-block;
-padding: 0.9rem 2.5rem;
-border: 1.5px solid var(–teal);
-color: var(–teal-dark);
-font-family: ‘Josefin Sans’, sans-serif;
-font-size: 0.78rem;
-letter-spacing: 0.25em;
-text-transform: uppercase;
-text-decoration: none;
-transition: all 0.3s ease;
-background: transparent;
-}
+  .btn-primary {
+    display: inline-block;
+    padding: 0.9rem 2.5rem;
+    border: 1.5px solid var(--teal);
+    color: var(--teal-dark);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background: transparent;
+  }
 
-.btn-primary:hover {
-background: var(–teal);
-color: white;
-}
+  .btn-primary:hover {
+    background: var(--teal);
+    color: white;
+  }
 
-/* ── SECTION LABELS ── */
-.section-label {
-font-family: ‘Josefin Sans’, sans-serif;
-font-size: 0.7rem;
-letter-spacing: 0.35em;
-text-transform: uppercase;
-color: var(–teal);
-margin-bottom: 0.5rem;
-}
+  /* ── SECTION LABELS ── */
+  .section-label {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 0.5rem;
+  }
 
-.section-title {
-font-family: ‘Playfair Display’, serif;
-font-size: clamp(2rem, 5vw, 3rem);
-font-weight: 700;
-color: var(–text-dark);
-line-height: 1.1;
-margin-bottom: 2.5rem;
-}
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: var(--text-dark);
+    line-height: 1.1;
+    margin-bottom: 2.5rem;
+  }
 
-.section-title em {
-font-style: italic;
-color: var(–teal);
-}
+  .section-title em {
+    font-style: italic;
+    color: var(--teal);
+  }
 
-/* ── EVENTS ── */
-.events-section {
-background: var(–parchment);
-border-top: 1px solid var(–border);
-border-bottom: 1px solid var(–border);
-}
+  /* ── EVENTS ── */
+  .events-section {
+    background: var(--parchment);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
 
-.events-inner {
-max-width: 900px;
-margin: 0 auto;
-padding: 5rem 2rem;
-}
+  .events-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+  }
 
-.event-card {
-background: var(–warm-white);
-border: 1px solid var(–border);
-border-left: 4px solid var(–teal);
-padding: 2.5rem;
-margin-bottom: 2rem;
-position: relative;
-transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-box-shadow: 0 2px 12px rgba(74,138,140,0.06);
-}
+  .event-card {
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--teal);
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 12px rgba(74,138,140,0.06);
+  }
 
-.event-card:hover {
-border-color: var(–teal-light);
-border-left-color: var(–amber);
-transform: translateY(-2px);
-box-shadow: 0 8px 30px rgba(74,138,140,0.12);
-}
+  .event-card:hover {
+    border-color: var(--teal-light);
+    border-left-color: var(--amber);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(74,138,140,0.12);
+  }
 
-.event-card.tbd {
-opacity: 0.6;
-border-left-color: #ccc;
-}
+  .event-card.tbd {
+    opacity: 0.6;
+    border-left-color: #ccc;
+  }
 
-.event-date {
-font-family: ‘Josefin Sans’, sans-serif;
-font-size: 0.7rem;
-letter-spacing: 0.3em;
-text-transform: uppercase;
-color: var(–amber);
-margin-bottom: 0.5rem;
-}
+  .event-date {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 0.5rem;
+  }
 
-.event-name {
-font-family: ‘Playfair Display’, serif;
-font-size: clamp(1.4rem, 3vw, 2rem);
-font-weight: 700;
-color: var(–text-dark);
-margin-bottom: 0.5rem;
-line-height: 1.2;
-}
+  .event-name {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+  }
 
-.event-desc {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 1.1rem;
-font-style: italic;
-color: var(–text-mid);
-line-height: 1.6;
-margin-bottom: 1.2rem;
-}
+  .event-desc {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--text-mid);
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+  }
 
-.event-meta {
-display: flex;
-gap: 2rem;
-flex-wrap: wrap;
-align-items: center;
-}
+  .event-meta {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
 
-.event-meta span {
-font-family: ‘Josefin Sans’, sans-serif;
-font-size: 0.68rem;
-letter-spacing: 0.2em;
-text-transform: uppercase;
-color: var(–text-light);
-}
+  .event-meta span {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-light);
+  }
 
-.event-meta span strong {
-color: var(–teal-dark);
-}
+  .event-meta span strong {
+    color: var(--teal-dark);
+  }
 
-.event-ticket-btn {
-display: inline-block;
-margin-top: 1.4rem;
-padding: 0.7rem 2rem;
-border: 1.5px solid var(–teal);
-color: var(–teal-dark);
-font-family: ‘Josefin Sans’, sans-serif;
-font-size: 0.7rem;
-letter-spacing: 0.25em;
-text-transform: uppercase;
-text-decoration: none;
-transition: all 0.3s ease;
-background: transparent;
-}
+  .event-ticket-btn {
+    display: inline-block;
+    margin-top: 1.4rem;
+    padding: 0.7rem 2rem;
+    border: 1.5px solid var(--teal);
+    color: var(--teal-dark);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background: transparent;
+  }
 
-.event-ticket-btn:hover {
-background: var(–teal);
-color: white;
-}
+  .event-ticket-btn:hover {
+    background: var(--teal);
+    color: white;
+  }
 
-/* ── ABOUT ── */
-.about-section {
-background: var(–warm-white);
-}
+  /* ── ABOUT ── */
+  .about-section {
+    background: var(--warm-white);
+  }
 
-.about-inner {
-max-width: 900px;
-margin: 0 auto;
-padding: 5rem 2rem;
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 4rem;
-align-items: center;
-}
+  .about-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
 
-@media (max-width: 640px) {
-.about-inner { grid-template-columns: 1fr; gap: 2rem; }
-}
+  @media (max-width: 640px) {
+    .about-inner { grid-template-columns: 1fr; gap: 2rem; }
+  }
 
-.about-text p {
-font-size: 1.15rem;
-line-height: 1.9;
-color: var(–text-mid);
-margin-bottom: 1rem;
-}
+  .about-text p {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: var(--text-mid);
+    margin-bottom: 1rem;
+  }
 
-.about-facts {
-display: flex;
-flex-direction: column;
-gap: 1.5rem;
-}
+  .about-facts {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
 
-.fact {
-border-left: 2px solid var(–teal);
-padding-left: 1.2rem;
-}
+  .fact {
+    border-left: 2px solid var(--teal);
+    padding-left: 1.2rem;
+  }
 
-.fact-label {
-font-family: ‘Josefin Sans’, sans-serif;
-font-size: 0.63rem;
-letter-spacing: 0.3em;
-text-transform: uppercase;
-color: var(–teal);
-margin-bottom: 0.2rem;
-}
+  .fact-label {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.63rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 0.2rem;
+  }
 
-.fact-value {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 1.1rem;
-color: var(–text-dark);
-line-height: 1.4;
-}
+  .fact-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    line-height: 1.4;
+  }
 
-/* ── TICKETS ── */
-.tickets-section {
-background: var(–teal-dark);
-color: white;
-}
+  /* ── TICKETS ── */
+  .tickets-section {
+    background: var(--teal-dark);
+    color: white;
+  }
 
-.tickets-inner {
-max-width: 900px;
-margin: 0 auto;
-padding: 5rem 2rem;
-text-align: center;
-}
+  .tickets-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+    text-align: center;
+  }
 
-.tickets-section .section-label {
-color: var(–teal-light);
-}
+  .tickets-section .section-label {
+    color: var(--teal-light);
+  }
 
-.tickets-section .section-title {
-color: white;
-}
+  .tickets-section .section-title {
+    color: white;
+  }
 
-.tickets-section .section-title em {
-color: var(–amber-light);
-}
+  .tickets-section .section-title em {
+    color: var(--amber-light);
+  }
 
-.ticket-price-display {
-font-family: ‘Playfair Display’, serif;
-font-size: clamp(4rem, 10vw, 7rem);
-font-weight: 900;
-color: var(–amber-light);
-line-height: 1;
-margin: 1rem 0 0.5rem;
-}
+  .ticket-price-display {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(4rem, 10vw, 7rem);
+    font-weight: 900;
+    color: var(--amber-light);
+    line-height: 1;
+    margin: 1rem 0 0.5rem;
+  }
 
-.ticket-price-label {
-font-family: ‘Josefin Sans’, sans-serif;
-font-size: 0.72rem;
-letter-spacing: 0.3em;
-text-transform: uppercase;
-color: rgba(255,255,255,0.5);
-margin-bottom: 2rem;
-}
+  .ticket-price-label {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 2rem;
+  }
 
-.ticket-note {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 1.15rem;
-font-style: italic;
-color: rgba(255,255,255,0.7);
-max-width: 480px;
-margin: 0 auto 2.5rem;
-line-height: 1.7;
-}
+  .ticket-note {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-style: italic;
+    color: rgba(255,255,255,0.7);
+    max-width: 480px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.7;
+  }
 
-.square-btn {
-display: inline-block;
-padding: 1.1rem 3rem;
-background: var(–amber);
-color: white;
-font-family: ‘Josefin Sans’, sans-serif;
-font-size: 0.82rem;
-letter-spacing: 0.25em;
-text-transform: uppercase;
-text-decoration: none;
-font-weight: 600;
-transition: all 0.3s ease;
-margin-bottom: 1rem;
-}
+  .square-btn {
+    display: inline-block;
+    padding: 1.1rem 3rem;
+    background: var(--amber);
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.82rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+  }
 
-.square-btn:hover {
-background: var(–amber-light);
-transform: translateY(-2px);
-box-shadow: 0 8px 30px rgba(196,115,42,0.4);
-}
+  .square-btn:hover {
+    background: var(--amber-light);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(196,115,42,0.4);
+  }
 
-.square-also {
-font-family: ‘Josefin Sans’, sans-serif;
-font-size: 0.65rem;
-letter-spacing: 0.2em;
-text-transform: uppercase;
-color: rgba(255,255,255,0.35);
-margin-top: 0.8rem;
-}
+  .square-also {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    margin-top: 0.8rem;
+  }
 
-/* ── FOOTER ── */
-footer {
-background: var(–text-dark);
-padding: 3rem 2rem;
-text-align: center;
-}
+  /* ── FOOTER ── */
+  footer {
+    background: var(--text-dark);
+    padding: 3rem 2rem;
+    text-align: center;
+  }
 
-.footer-logo {
-width: 200px;
-height: auto;
-margin-bottom: 1rem;
-opacity: 0.9;
-filter: brightness(1.1);
-}
+  .footer-logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+    filter: brightness(1.1);
+  }
 
-.footer-venue {
-font-family: ‘Josefin Sans’, sans-serif;
-font-size: 0.65rem;
-letter-spacing: 0.3em;
-text-transform: uppercase;
-color: rgba(255,255,255,0.35);
-margin-bottom: 1.5rem;
-}
+  .footer-venue {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    margin-bottom: 1.5rem;
+  }
 
-.footer-line {
-width: 60px;
-height: 1px;
-background: linear-gradient(90deg, transparent, var(–teal), transparent);
-margin: 0 auto 1.5rem;
-}
+  .footer-line {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--teal), transparent);
+    margin: 0 auto 1.5rem;
+  }
 
-.footer-contact {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 1rem;
-color: rgba(255,255,255,0.4);
-}
+  .footer-contact {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    color: rgba(255,255,255,0.4);
+  }
 
-.footer-address {
-font-family: ‘Josefin Sans’, sans-serif;
-font-size: 0.65rem;
-letter-spacing: 0.2em;
-text-transform: uppercase;
-color: rgba(255,255,255,0.25);
-margin-top: 0.5rem;
-}
+  .footer-address {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.25);
+    margin-top: 0.5rem;
+  }
 
-/* ── ANIMATIONS ── */
-@keyframes fadeUp {
-from { opacity: 0; transform: translateY(24px); }
-to   { opacity: 1; transform: translateY(0); }
-}
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
 </style>
-
 </head>
 <body>
 
@@ -494,7 +492,6 @@ to   { opacity: 1; transform: translateY(0); }
 </nav>
 
 <!-- HERO -->
-
 <div class="hero">
   <img src="https://claude.ai/public/artifacts/dec85688-31d4-4c13-be67-308c1fc0e3cc" 
        alt="Absolute Music" class="hero-logo"
@@ -509,51 +506,47 @@ to   { opacity: 1; transform: translateY(0); }
 </div>
 
 <!-- CONCERTS -->
-
 <div class="events-section" id="concerts">
   <div class="events-inner">
     <div class="section-label">Upcoming Performances</div>
     <h2 class="section-title">2026 <em>Season</em></h2>
 
-```
-<div class="event-card">
-  <div class="event-date">Sunday, July 12, 2026 &nbsp;·&nbsp; 3:00 PM</div>
-  <div class="event-name">Le Hot Club Swing Jazz Quartet</div>
-  <div class="event-desc">Stéphane Grappelli–style 1930s Paris jazz — the hot, intimate swing of Django Reinhardt and the Quintette du Hot Club de France, reimagined live.</div>
-  <div class="event-meta">
-    <span>📍 <strong>Social Hall</strong>, Congregation Beth Ami</span>
-    <span>🎟 <strong>$35</strong> per ticket</span>
-  </div>
-  <a href="https://square.link/u/dHefCOgV" class="event-ticket-btn">Purchase Tickets</a>
-</div>
+    <div class="event-card">
+      <div class="event-date">Sunday, July 19, 2026 &nbsp;·&nbsp; 3:00 PM</div>
+      <div class="event-name">Le Hot Club Swing Jazz Quartet</div>
+      <div class="event-desc">Stéphane Grappelli–style 1930s Paris jazz — the hot, intimate swing of Django Reinhardt and the Quintette du Hot Club de France, reimagined live.</div>
+      <div class="event-meta">
+        <span>📍 <strong>Social Hall</strong>, Congregation Beth Ami</span>
+        <span>🎟 <strong>$35</strong> per ticket</span>
+      </div>
+      <a href="https://square.link/u/dHefCOgV" class="event-ticket-btn">Purchase Tickets</a>
+    </div>
 
-<div class="event-card">
-  <div class="event-date">Sunday, August 16, 2026 &nbsp;·&nbsp; 3:00 PM</div>
-  <div class="event-name">The Big Easy Jazz Orchestra</div>
-  <div class="event-desc">A full big band celebration of New Orleans jazz — lush brass, swinging rhythms, and the irresistible spirit of the Crescent City.</div>
-  <div class="event-meta">
-    <span>📍 <strong>Social Hall</strong>, Congregation Beth Ami</span>
-    <span>🎟 <strong>$35</strong> per ticket</span>
-  </div>
-  <a href="https://square.link/u/dHefCOgV" class="event-ticket-btn">Purchase Tickets</a>
-</div>
+    <div class="event-card">
+      <div class="event-date">Sunday, August 23, 2026 &nbsp;·&nbsp; 3:00 PM</div>
+      <div class="event-name">The Big Easy Jazz Orchestra</div>
+      <div class="event-desc">Performing contemporary swing in the tradition of Count Basie, Gordon Goodwin, and others — powerful brass, vibrant rhythms, and wonderful music.</div>
+      <div class="event-meta">
+        <span>📍 <strong>Social Hall</strong>, Congregation Beth Ami</span>
+        <span>🎟 <strong>$35</strong> per ticket</span>
+      </div>
+      <a href="https://square.link/u/dHefCOgV" class="event-ticket-btn">Purchase Tickets</a>
+    </div>
 
-<div class="event-card tbd">
-  <div class="event-date">Date to be announced</div>
-  <div class="event-name">StringCircle Quartet</div>
-  <div class="event-desc">An elegant chamber music performance featuring violinists Joseph Edelberg and Kati Kyme, violist Anthony Martin, and cellist Thalia Moore.</div>
-  <div class="event-meta">
-    <span>📍 <strong>Sanctuary</strong>, Congregation Beth Ami</span>
-    <span>🎟 <strong>$35</strong> per ticket</span>
-  </div>
-</div>
-```
+    <div class="event-card tbd">
+      <div class="event-date">Date to be announced</div>
+      <div class="event-name">StringCircle Quartet</div>
+      <div class="event-desc">An elegant chamber music performance featuring violinists Joseph Edelberg and Kati Kyme, violist Anthony Martin, and cellist Thalia Moore.</div>
+      <div class="event-meta">
+        <span>📍 <strong>Sanctuary</strong>, Congregation Beth Ami</span>
+        <span>🎟 <strong>$35</strong> per ticket</span>
+      </div>
+    </div>
 
   </div>
 </div>
 
 <!-- ABOUT -->
-
 <div class="about-section" id="about">
   <div class="about-inner">
     <div class="about-text">
@@ -584,7 +577,6 @@ to   { opacity: 1; transform: translateY(0); }
 </div>
 
 <!-- TICKETS -->
-
 <div class="tickets-section" id="tickets">
   <div class="tickets-inner">
     <div class="section-label">Get Your Tickets</div>
@@ -599,7 +591,611 @@ to   { opacity: 1; transform: translateY(0); }
 </div>
 
 <!-- FOOTER -->
+<footer>
+  <img src="https://claude.ai/public/artifacts/dec85688-31d4-4c13-be67-308c1fc0e3cc" 
+       alt="Absolute Music" class="footer-logo"
+       onerror="this.style.display='none'">
+  <div class="footer-venue">Congregation Beth Ami &nbsp;·&nbsp; Santa Rosa, CA</div>
+  <div class="footer-line"></div>
+  <div class="footer-contact">Questions? Contact us at rcarlkahn@gmail.com</div>
+  <div class="footer-address">4676 Mayette Ave &nbsp;·&nbsp; Santa Rosa, CA 95405</div>
+</footer>
 
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Absolute Music | Live Concerts at Congregation Beth Ami</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #4a8a8c;
+    --teal-dark: #2d6b6d;
+    --teal-light: #7ab8ba;
+    --amber: #c4732a;
+    --amber-light: #e8a05a;
+    --cream: #fdf8f0;
+    --warm-white: #fffcf7;
+    --parchment: #f5ede0;
+    --text-dark: #1e1a14;
+    --text-mid: #4a3f2f;
+    --text-light: #8a7a65;
+    --border: rgba(74,138,140,0.2);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--cream);
+    color: var(--text-dark);
+    font-family: 'Cormorant Garamond', serif;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 1rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(253,248,240,0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--teal-dark);
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--teal); }
+
+  @media (max-width: 500px) { .nav-links { display: none; } }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background:
+      radial-gradient(ellipse at 30% 50%, rgba(74,138,140,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 20%, rgba(196,115,42,0.08) 0%, transparent 50%),
+      linear-gradient(160deg, var(--warm-white) 0%, var(--cream) 50%, var(--parchment) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 6rem 2rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 80px, rgba(74,138,140,0.03) 80px, rgba(74,138,140,0.03) 81px),
+      repeating-linear-gradient(90deg, transparent, transparent 80px, rgba(74,138,140,0.03) 80px, rgba(74,138,140,0.03) 81px);
+    pointer-events: none;
+  }
+
+  .hero-logo {
+    width: min(480px, 85vw);
+    height: auto;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fadeUp 1s ease 0.2s forwards;
+    filter: drop-shadow(0 4px 20px rgba(74,138,140,0.15));
+  }
+
+  .hero-divider {
+    width: 160px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--teal), transparent);
+    margin: 0.5rem auto 1.5rem;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.6s forwards;
+  }
+
+  .hero-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--text-mid);
+    line-height: 1.7;
+    max-width: 560px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.8s forwards;
+  }
+
+  .hero-venue {
+    margin-top: 1.2rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--teal);
+    opacity: 0;
+    animation: fadeUp 0.8s ease 1s forwards;
+  }
+
+  .hero-cta {
+    margin-top: 2.5rem;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 1.2s forwards;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    padding: 0.9rem 2.5rem;
+    border: 1.5px solid var(--teal);
+    color: var(--teal-dark);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background: transparent;
+  }
+
+  .btn-primary:hover {
+    background: var(--teal);
+    color: white;
+  }
+
+  /* ── SECTION LABELS ── */
+  .section-label {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 0.5rem;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: var(--text-dark);
+    line-height: 1.1;
+    margin-bottom: 2.5rem;
+  }
+
+  .section-title em {
+    font-style: italic;
+    color: var(--teal);
+  }
+
+  /* ── EVENTS ── */
+  .events-section {
+    background: var(--parchment);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .events-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+  }
+
+  .event-card {
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--teal);
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 12px rgba(74,138,140,0.06);
+  }
+
+  .event-card:hover {
+    border-color: var(--teal-light);
+    border-left-color: var(--amber);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(74,138,140,0.12);
+  }
+
+  .event-card.tbd {
+    opacity: 0.6;
+    border-left-color: #ccc;
+  }
+
+  .event-date {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 0.5rem;
+  }
+
+  .event-name {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+  }
+
+  .event-desc {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--text-mid);
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+  }
+
+  .event-meta {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .event-meta span {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-light);
+  }
+
+  .event-meta span strong {
+    color: var(--teal-dark);
+  }
+
+  .event-ticket-btn {
+    display: inline-block;
+    margin-top: 1.4rem;
+    padding: 0.7rem 2rem;
+    border: 1.5px solid var(--teal);
+    color: var(--teal-dark);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background: transparent;
+  }
+
+  .event-ticket-btn:hover {
+    background: var(--teal);
+    color: white;
+  }
+
+  /* ── ABOUT ── */
+  .about-section {
+    background: var(--warm-white);
+  }
+
+  .about-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  @media (max-width: 640px) {
+    .about-inner { grid-template-columns: 1fr; gap: 2rem; }
+  }
+
+  .about-text p {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: var(--text-mid);
+    margin-bottom: 1rem;
+  }
+
+  .about-facts {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .fact {
+    border-left: 2px solid var(--teal);
+    padding-left: 1.2rem;
+  }
+
+  .fact-label {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.63rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 0.2rem;
+  }
+
+  .fact-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    line-height: 1.4;
+  }
+
+  /* ── TICKETS ── */
+  .tickets-section {
+    background: var(--teal-dark);
+    color: white;
+  }
+
+  .tickets-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+
+  .tickets-section .section-label {
+    color: var(--teal-light);
+  }
+
+  .tickets-section .section-title {
+    color: white;
+  }
+
+  .tickets-section .section-title em {
+    color: var(--amber-light);
+  }
+
+  .ticket-price-display {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(4rem, 10vw, 7rem);
+    font-weight: 900;
+    color: var(--amber-light);
+    line-height: 1;
+    margin: 1rem 0 0.5rem;
+  }
+
+  .ticket-price-label {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 2rem;
+  }
+
+  .ticket-note {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-style: italic;
+    color: rgba(255,255,255,0.7);
+    max-width: 480px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.7;
+  }
+
+  .square-btn {
+    display: inline-block;
+    padding: 1.1rem 3rem;
+    background: var(--amber);
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.82rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+  }
+
+  .square-btn:hover {
+    background: var(--amber-light);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(196,115,42,0.4);
+  }
+
+  .square-also {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    margin-top: 0.8rem;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--text-dark);
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+
+  .footer-logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+    filter: brightness(1.1);
+  }
+
+  .footer-venue {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-line {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--teal), transparent);
+    margin: 0 auto 1.5rem;
+  }
+
+  .footer-contact {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    color: rgba(255,255,255,0.4);
+  }
+
+  .footer-address {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.25);
+    margin-top: 0.5rem;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">Absolute Music</a>
+  <ul class="nav-links">
+    <li><a href="#concerts">Concerts</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#tickets">Tickets</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <img src="https://claude.ai/public/artifacts/dec85688-31d4-4c13-be67-308c1fc0e3cc" 
+       alt="Absolute Music" class="hero-logo"
+       onerror="this.style.display='none'; document.querySelector('.hero-title-fallback').style.display='block'">
+  <div class="hero-title-fallback" style="display:none; font-family:'Playfair Display',serif; font-size:clamp(3rem,10vw,7rem); font-weight:900; color:var(--teal-dark); line-height:0.9; margin-bottom:1rem;">Absolute<br><em style="color:var(--amber);">Music</em></div>
+  <div class="hero-divider"></div>
+  <p class="hero-sub">Intimate live concerts — jazz, swing, big band, and chamber music — in the heart of Sonoma County</p>
+  <div class="hero-venue">Congregation Beth Ami &nbsp;·&nbsp; Santa Rosa, California &nbsp;·&nbsp; Sundays at 3 pm</div>
+  <div class="hero-cta">
+    <a href="#concerts" class="btn-primary">View Upcoming Concerts</a>
+  </div>
+</div>
+
+<!-- CONCERTS -->
+<div class="events-section" id="concerts">
+  <div class="events-inner">
+    <div class="section-label">Upcoming Performances</div>
+    <h2 class="section-title">2026 <em>Season</em></h2>
+
+    <div class="event-card">
+      <div class="event-date">Sunday, July 19, 2026 &nbsp;·&nbsp; 3:00 PM</div>
+      <div class="event-name">Le Hot Club Swing Jazz Quartet</div>
+      <div class="event-desc">Stéphane Grappelli–style 1930s Paris jazz — the hot, intimate swing of Django Reinhardt and the Quintette du Hot Club de France, reimagined live.</div>
+      <div class="event-meta">
+        <span>📍 <strong>Social Hall</strong>, Congregation Beth Ami</span>
+        <span>🎟 <strong>$35</strong> per ticket</span>
+      </div>
+      <a href="https://square.link/u/dHefCOgV" class="event-ticket-btn">Purchase Tickets</a>
+    </div>
+
+    <div class="event-card">
+      <div class="event-date">Sunday, August 23, 2026 &nbsp;·&nbsp; 3:00 PM</div>
+      <div class="event-name">The Big Easy Jazz Orchestra</div>
+      <div class="event-desc">Performing contemporary swing in the tradition of Count Basie, Gordon Goodwin, and others — powerful brass, vibrant rhythms, and wonderful music.</div>
+      <div class="event-meta">
+        <span>📍 <strong>Social Hall</strong>, Congregation Beth Ami</span>
+        <span>🎟 <strong>$35</strong> per ticket</span>
+      </div>
+      <a href="https://square.link/u/dHefCOgV" class="event-ticket-btn">Purchase Tickets</a>
+    </div>
+
+    <div class="event-card tbd">
+      <div class="event-date">Date to be announced</div>
+      <div class="event-name">StringCircle Quartet</div>
+      <div class="event-desc">An elegant chamber music performance featuring violinists Joseph Edelberg and Kati Kyme, violist Anthony Martin, and cellist Thalia Moore.</div>
+      <div class="event-meta">
+        <span>📍 <strong>Sanctuary</strong>, Congregation Beth Ami</span>
+        <span>🎟 <strong>$35</strong> per ticket</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div class="about-section" id="about">
+  <div class="about-inner">
+    <div class="about-text">
+      <div class="section-label">About Us</div>
+      <h2 class="section-title" style="font-size:2rem;">A Community <em>Concert Series</em></h2>
+      <p>Absolute Music brings world-class live performance to our community — intimate concerts in the warm, welcoming spaces of Congregation Beth Ami in Santa Rosa.</p>
+      <p>From the smoky swing of 1930s Paris jazz to the exuberant brass of a full big band, each concert is a chance to experience extraordinary music up close.</p>
+    </div>
+    <div class="about-facts">
+      <div class="fact">
+        <div class="fact-label">Venue</div>
+        <div class="fact-value">Congregation Beth Ami<br>4676 Mayette Ave, Santa Rosa 95405</div>
+      </div>
+      <div class="fact">
+        <div class="fact-label">When</div>
+        <div class="fact-value">Sunday afternoons at 3 pm</div>
+      </div>
+      <div class="fact">
+        <div class="fact-label">Music</div>
+        <div class="fact-value">Jazz · Swing · Big Band · Chamber</div>
+      </div>
+      <div class="fact">
+        <div class="fact-label">Tickets</div>
+        <div class="fact-value">$35 · Available online or at the door</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TICKETS -->
+<div class="tickets-section" id="tickets">
+  <div class="tickets-inner">
+    <div class="section-label">Get Your Tickets</div>
+    <h2 class="section-title">Join <em>Us</em></h2>
+    <div class="ticket-price-display">$35</div>
+    <div class="ticket-price-label">per ticket · all performances</div>
+    <p class="ticket-note">Purchase tickets in advance online, or pay at the door the day of the concert. We accept credit cards and cash.</p>
+    <br>
+    <a href="https://square.link/u/dHefCOgV" class="square-btn">Buy Tickets Online</a>
+    <div class="square-also">Also available at the door · Cash &amp; card accepted</div>
+  </div>
+</div>
+
+<!-- FOOTER -->
 <footer>
   <img src="https://claude.ai/public/artifacts/dec85688-31d4-4c13-be67-308c1fc0e3cc" 
        alt="Absolute Music" class="footer-logo"
